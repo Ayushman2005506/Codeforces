@@ -9,14 +9,9 @@ int main() {
         int n;
         cin >> n;
 
-        int a = 1;
-        int b = 1;
-        int c = n - 2;
-
-        if (c > 26) {
-            b += c - 26;
-            c = 26;
-        }
+        int a = max(1, n - 52);
+        int b = max(1, n - a - 26);
+        int c = n - a - b;
 
         cout << char('a' + a - 1)
              << char('a' + b - 1)
